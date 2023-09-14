@@ -8,7 +8,8 @@
   "type": "module",
   "scripts": {
     "dev": "rollup -c -w",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "vitest"
   },
   "files": [
     "dist"
@@ -36,6 +37,7 @@
     "@types/node": "^20.5.6",
     "qrcode": "^1.5.3",
     "tslib": "2.5.0",
+    "vitest": "^0.34.3",
     "vue": "3.2.30",
     "vue-demi": "0.12.1"
   }

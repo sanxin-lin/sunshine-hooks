@@ -41,15 +41,16 @@ export function useIntervalFn(
     isActive.value = false;
     clean();
   };
-
   const resume = () => {
     const intervalValue = toValue(interval);
+    console.log(intervalValue)
     if (intervalValue <= 0) return;
     isActive.value = true;
     if (immediateCallback) {
       cb();
     }
     clean();
+    console.log('-intervalValue-', intervalValue)
     timer = setInterval(cb, intervalValue);
   };
 

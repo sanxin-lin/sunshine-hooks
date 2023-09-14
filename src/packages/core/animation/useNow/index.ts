@@ -27,8 +27,9 @@ export function useNow(options: UseNowOptions<boolean> = {}) {
 
   const now = ref(new Date());
 
-  const update = () => (now.value = new Date());
-
+  const update = () => {
+    now.value = new Date()
+  };
   const controls =
     interval === 'requestAnimationFrame'
       ? useRafFn(update, { immediate: true })
